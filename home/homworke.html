@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .a {
+            color: blue;
+            /* Цвет ссылок */
+            text-decoration: none;
+            /* Убираем подчёркивание */
+        }
+ 
+        .a:hover {
+            border-bottom: 1px dashed blue;
+            /* Добавляем синее пунктирное подчёркивание */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="https://google.com"> Гугл</a></li>
+        <li><a href="https://itstep.org"> Шаг</a></li>
+        <li><a href="https://mystat.itstep.org"> Май стат</a></li>
+        <li><a href="https://bigpicture.ru/?p=527019"> Кошара</a></li>
+        <li><a href=""> Собака</a></li>
+        <li><a href=""> Playboy</a></li>
+    </ul>
+    <script>
+        for (let e of Array.from(document.links)) { // document.links для упрощения - все ссылки в документе
+            if (e.href.match(/^https?:/i))
+                e.classList.add("a")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<ul class="main">this PC
+    <ul>
+        <li class="main">Local Disc(C:)
+            <ul>
+                <li>Program Files</li>
+                <li>Users</li>
+                <li>Windows</li>
+            </ul>
+        </li>
+        <br>
+        <li class="main">Local Disc(D:)
+            <ul>
+                <li>New Folder 1</li>
+                <li>New Folder 2</li>
+                <li>New Folder 3</li>
+            </ul>
+        </li>
+    </ul>
+</ul>
+ 
+<script>
+    document.addEventListener('click',look);
+    function look(e){
+        if(e.target.className == 'main'){
+            let param = e.target.children[0];
+            param.style.display = param.style.display === "none" ? "block" : "none";
+        }
+    }
+</script>
